@@ -553,10 +553,11 @@ $d.<span class="fn">bind</span>(<span class="str">'deck.init'</span>, <span clas
 			
 			<pre><code>$.<span class="fn">extend</span>(<span class="kw">true</span>, $.deck.defaults, {
    <span class="key">selectors</span>: {
-      <span class="key">hashLink: <span class="str">'.deck-permalink'</span>
+      <span class="key">hashLink</span>: <span class="str">'.deck-permalink'</span>
    },
 
-   <span class="key">hashPrefix</span>: <span class="str">'slide-'</span>
+   <span class="key">hashPrefix</span>: <span class="str">'slide-'</span>,
+   <span class="key">preventFragmentScroll</span>: <span class="kw">true</span>
 });</code></pre>
 			
 			<dl>
@@ -564,6 +565,8 @@ $d.<span class="fn">bind</span>(<span class="str">'deck.init'</span>, <span clas
 				<dd>The element matching this selector has its href attribute updated to the hash of the current slide as the user navigates through the deck.</dd>
 				<dt>options.hashPrefix</dt>
 				<dd>Every slide that does not have an <code>id</code> is assigned one at initialization. Assigned ids take the form of hashPrefix + slideIndex, e.g., <code>slide-0</code>, <code>slide-12</code>, etc.</dd>
+				<dt>options.preventFragmentScroll</dt>
+				<dd>If true, when deep linking to a hash of a nested slide the deck container will be scrolled to the top on load, undoing the natural browser behavior of scrolling to the document fragment.</dd>
 			</dl>
 			
 		</section>
