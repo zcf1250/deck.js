@@ -62,8 +62,6 @@ $(function() {
 		$('#sticky-wrapper')
 			.toggleClass('hidden', !current.is($topLevels))
 			.find('h2').text(current.find('h2').text());
-	}, {
-		continuous: true
 	});
 	
 	$level2.waypoint(function(event, direction) {
@@ -76,7 +74,5 @@ $(function() {
 		
 		$('#sticky-wrapper')
 			.find('h3').text(current.find('h3').text());
-	}, {
-		continuous: true
 	});
 });
